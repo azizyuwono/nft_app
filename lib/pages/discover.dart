@@ -8,12 +8,11 @@ import 'package:simple_nft/widgets/nft_card.dart';
 import '../theme.dart';
 
 class Discover extends StatelessWidget {
-  const Discover({Key? key}) : super(key: key);
+  const Discover({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF6F9FC),
       body: SafeArea(
         bottom: false,
         child: Stack(
@@ -22,15 +21,17 @@ class Discover extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Footer(),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 25,
-                left: 24,
-                right: 24,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+            SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 25,
+                  left: 24,
+                  right: 24,
+                  bottom: 100,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                   Row(
                     children: [
                       Image.asset(
@@ -77,7 +78,7 @@ class Discover extends StatelessWidget {
                     height: 16,
                   ),
                   SizedBox(
-                    height: 268,
+                    height: 300,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
@@ -112,7 +113,7 @@ class Discover extends StatelessWidget {
                     height: 16,
                   ),
                   SizedBox(
-                    height: 200,
+                    height: 240,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
@@ -138,6 +139,7 @@ class Discover extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
             ),
           ],
         ),

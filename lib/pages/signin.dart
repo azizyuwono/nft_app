@@ -4,21 +4,22 @@ import 'package:simple_nft/pages/discover.dart';
 import '../theme.dart';
 
 class SignIn extends StatelessWidget {
-  const SignIn({Key? key}) : super(key: key);
+  const SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF6F9FC),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(
-            top: 70,
-            left: 28,
-            right: 28,
-          ),
-          child: Column(
-            children: [
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(
+              top: 70,
+              left: 28,
+              right: 28,
+              bottom: 20,
+            ),
+            child: Column(
+              children: [
               Center(
                 child: Text(
                   'Start Collecting\nAmazing Artworks',
@@ -60,13 +61,7 @@ class SignIn extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
-                      decoration: InputDecoration(
-                        fillColor: const Color(0xffF7F9FC),
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(13),
-                        ),
+                      decoration: const InputDecoration(
                         hintText: 'Name',
                       ),
                     ),
@@ -90,13 +85,7 @@ class SignIn extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
-                      decoration: InputDecoration(
-                        fillColor: const Color(0xffF7F9FC),
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(13),
-                        ),
+                      decoration: const InputDecoration(
                         hintText: 'Email',
                       ),
                     ),
@@ -121,27 +110,17 @@ class SignIn extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                       obscureText: true,
-                      decoration: InputDecoration(
-                        fillColor: const Color(0xffF7F9FC),
-                        filled: true,
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(13),
-                        ),
+                      decoration: const InputDecoration(
                         hintText: 'Password',
                       ),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
-                    Container(
+                    SizedBox(
                       width: 288,
                       height: 50,
-                      child: RaisedButton(
-                        color: blueColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(13),
-                        ),
+                      child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -150,12 +129,8 @@ class SignIn extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Getting Started',
-                          style: titleStyle.copyWith(
-                            color: whiteColor,
-                            fontSize: 16,
-                          ),
                         ),
                       ),
                     ),
@@ -166,12 +141,13 @@ class SignIn extends StatelessWidget {
                 height: 157,
               ),
               Text(
-                'Sign In To My Acount',
+                'Sign In To My Account',
                 style: subStyle,
               ),
             ],
           ),
         ),
+      ),
       ),
     );
   }

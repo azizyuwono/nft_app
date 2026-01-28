@@ -1,30 +1,24 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:simple_nft/main.dart';
+import 'package:simple_nft/pages/get_started.dart';
+import 'package:simple_nft/pages/signin.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('GetStarted page loads and navigates to SignIn', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that we are on GetStarted page
+    expect(find.byType(GetStarted), findsOneWidget);
+    expect(find.text('Collect NFTs As\nYour Own Collection'), findsOneWidget);
+    expect(find.text('Getting Started'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Tap the 'Getting Started' button.
+    await tester.tap(find.text('Getting Started'));
+    await tester.pumpAndSettle(); // Wait for navigation animation
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that we are on SignIn page
+    expect(find.byType(SignIn), findsOneWidget);
+    expect(find.text('Start Collecting\nAmazing Artworks'), findsOneWidget);
   });
 }

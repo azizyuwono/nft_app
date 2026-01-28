@@ -13,7 +13,6 @@ class NftCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 270,
-      height: 268,
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(20),
@@ -31,34 +30,37 @@ class NftCard extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      nft.name,
-                      style: titleStyle.copyWith(
-                        fontSize: 16,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        nft.name,
+                        style: titleStyle.copyWith(
+                          fontSize: 16,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 9,
-                    ),
-                    Row(
-                      children: [
-                        Text('Ends in', style: subStyle.copyWith(fontSize: 14)),
-                        const SizedBox(
-                          width: 4,
-                        ),
-                        Text(
-                          '35m 11s',
-                          style:
-                              GoogleFonts.inter(fontSize: 14, color: redColor),
-                        ),
-                      ],
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 9,
+                      ),
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          Text('Ends in',
+                              style: subStyle.copyWith(fontSize: 14)),
+                          const SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            '35m 11s',
+                            style: GoogleFonts.inter(
+                                fontSize: 14, color: redColor),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                const Spacer(),
                 Row(
                   children: [
                     Image.asset(
