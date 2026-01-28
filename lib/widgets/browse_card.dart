@@ -10,7 +10,6 @@ class BrowseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 140,
-      height: 197,
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(20),
