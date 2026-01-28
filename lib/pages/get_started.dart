@@ -3,7 +3,7 @@ import 'package:simple_nft/pages/signin.dart';
 import '../theme.dart';
 
 class GetStarted extends StatelessWidget {
-  const GetStarted({super.key});
+  const GetStarted({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class GetStarted extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                'NFT is gonna help us to keep what\nbelongs to us, like forever',
+                'NFT is gonna help us to keep what\nis belong to us, like forever',
                 style: subStyle,
               ),
               const SizedBox(
@@ -41,7 +41,10 @@ class GetStarted extends StatelessWidget {
               SizedBox(
                 width: 180,
                 height: 50,
-                child: ElevatedButton(
+                child: RaisedButton(
+                  color: blueColor,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(13)),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -50,8 +53,12 @@ class GetStarted extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     'Getting Started',
+                    style: titleStyle.copyWith(
+                      color: whiteColor,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               )

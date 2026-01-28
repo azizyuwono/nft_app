@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:simple_nft/pages/discover.dart';
 import 'package:simple_nft/pages/get_started.dart';
-import 'package:simple_nft/theme.dart';
+import 'package:simple_nft/pages/signin.dart';
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  @override
+  @override 
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: appTheme(),
-      home: const GetStarted(),
+      home: GetStarted(),
     );
   }
 }
