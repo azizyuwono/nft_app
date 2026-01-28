@@ -1,6 +1,20 @@
 # simple_nft
 
-A new Flutter project.
+A comprehensive NFT Marketplace Flutter application featuring browsing, bidding, and account management screens.
+
+<p align="center">
+  <img src="assets/preview_get_started.png" width="200" alt="Get Started">
+  <img src="assets/preview_signin.png" width="200" alt="Sign In">
+  <img src="assets/preview_discover.png" width="200" alt="Discover">
+</p>
+
+## Features
+
+- **Get Started**: Introductory screen with smooth navigation.
+- **Sign In**: User authentication UI with responsive layout.
+- **Discover**: Browse popular bids and categories with horizontal scrolling lists.
+- **Theme Support**: Centralized theme management for consistent styling (Dark/Light mode ready architecture).
+- **Responsive**: Scrollable layouts to support various screen sizes.
 
 ## Getting Started
 
