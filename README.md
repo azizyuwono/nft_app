@@ -3,7 +3,9 @@
 A comprehensive NFT Marketplace Flutter application featuring browsing, bidding, and account management screens.
 
 <p align="center">
-  <img src="assets/mobile_preview.png" width="300" alt="App Preview">
+  <img src="assets/preview_get_started.png" width="200" alt="Get Started">
+  <img src="assets/preview_signin.png" width="200" alt="Sign In">
+  <img src="assets/preview_discover.png" width="200" alt="Discover">
 </p>
 
 ## Features
